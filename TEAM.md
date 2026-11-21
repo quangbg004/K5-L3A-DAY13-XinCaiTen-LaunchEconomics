@@ -6,7 +6,7 @@
 - Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-XinCaiTen-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo và nhánh nộp: [GitHub · main](https://github.com/quangbg004/K5-L3A-DAY13-XinCaiTen-LaunchEconomics/tree/main)
-- Commit chốt nội dung: cập nhật sau khi hợp nhất bản nộp.
+- Commit chốt nội dung: [`985ac7b`](https://github.com/quangbg004/K5-L3A-DAY13-XinCaiTen-LaunchEconomics/commit/985ac7b).
 
 ## Thành viên
 
