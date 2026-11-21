@@ -1,32 +1,35 @@
 # Báo cáo nhóm
 
-Báo cáo ngắn, tối đa 2 trang. Số liệu chi tiết nằm trong các file hồ sơ; ở đây chỉ dẫn lại con số chính.
+Bản nháp trước duyệt chéo. Dữ liệu LogiX-VN là giả lập.
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
-- Lớp:
-- Thành viên: xem `TEAM.md`
+- Tên nhóm: XinCaiTen
+- Lớp: L3A
+- Thành viên và vai trò: [TEAM.md](../../TEAM.md)
 
 ## 2. Mục tiêu và cách tiếp cận
 
-...
+Đánh giá liệu trợ lý hoàn phí có đáng để đưa vào pilot có đối chứng. Nhóm dùng 1.200 yêu cầu và 1.624 lần chạy để kiểm tra chi phí, phân tích độ nhạy và xác định bằng chứng cần có trước Gate 2a.
 
 ## 3. Giải pháp
 
-Tóm tắt cách nhóm làm từng nhiệm vụ A–E và link tới file hồ sơ tương ứng.
-
-...
+- **A · Chi phí:** Cộng tiền token và tool của mọi lần chạy với chi phí xem lại và làm lại ở cấp yêu cầu, rồi chia cho số yêu cầu thành công. Tách theo loại yêu cầu và cộng chi phí cố định cho phạm vi dự kiến. [Bảng chi phí](bang_chi_phi.md)
+- **B · Độ nhạy:** So sánh 9 kịch bản, giới hạn 1–3 lần chạy và kịch bản xem lại 100%. Code đã xuất kết quả A/B để người kiểm số đối chiếu và điền bảng. [Code A/B](../../src/lab13.py)
+- **C · Bảng lỗi:** Thắng và Quang phụ trách hai lượt gắn nhãn độc lập. Sau khi chốt hai bộ nhãn, đối chiếu và chọn một ca mỗi loại để đề xuất cách phát hiện và khắc phục. [Bảng lỗi](bang_loi.md)
+- **D · Pilot:** Code D1 đã có kết quả tính cỡ mẫu. Phương án phân nhóm, đối chứng và luật dừng đang chờ người phụ trách pilot chốt. [Kế hoạch pilot](pilot_plan.yaml)
+- **E · Chỉ số và quyết định:** Đếm ba chỉ số từ mẫu chạy thử và tổng hợp bằng chứng vào hồ sơ. Thắng phụ trách đặc tả event và bảng rủi ro. [Bảng chỉ số](chi_so.md) · [Hồ sơ launch v0](ho_so_launch_v0.md)
 
 ## 4. Kết quả
 
-Con số chính (ghi nhãn `simulated` khi cần) và đề xuất cuối của `ho_so_launch_v0.md`. Kết quả duyệt chéo nhóm nhận được từ hội đồng.
-
-...
+- `python lab13.py` chạy hết và in cả ba phép thử A1 đạt. Chi phí mỗi việc thành công là **4.472 đ** trên toàn mẫu. Trong phạm vi `noi_dia` + `hang_nang`, chi phí là **4.599 đ** ở quy mô 45.000 yêu cầu/tháng, đã gồm chi phí cố định, và **12.415 đ** chưa gồm chi phí cố định nếu xem lại 100% với khoảng 15,3 phút làm lại mỗi ca. Cả ba số là `simulated`. [Code và cách tính](../../src/lab13.py)
+- **Chỉ số trong đợt chạy thử.** Đếm từ [CSV yêu cầu](../../src/logix_requests.csv) rồi chia: `dong_trong_24h = 1` và `mo_lai_trong_7_ngay = 0` cho **994/1.200 = 82,83%**. Trong 177 yêu cầu có `duoc_xem_lai = 1`, `quyet_dinh_xem_lai` là `sua` hoặc `bo` ở **48/177 = 27,12%**. `mo_lai_trong_7_ngay = 1` ở **51/1.200 = 4,25%**.
+- **Đề xuất bản nháp:** No-go ở lần duyệt này. Chốt CP3, đối chứng, luật dừng và cách đo thời gian nhân viên trước khi quay lại Gate 2a. Điểm và nhận xét từ hội đồng chờ phiên duyệt chéo. [Phiếu nhóm dùng để chấm nhóm bạn](phieu_cham.md)
 
 ## 5. Khó khăn và cách xử lý
 
-...
+- Thứ tự tổng hợp phụ thuộc vào kết quả CP3, CP4 và đặc tả chỉ số CP5. Hồ sơ ghi rõ các mục đang chờ để nhóm cập nhật khi có bằng chứng.
+- Khi đóng gói, kiểm lại [checklist nộp bài](../../SUBMISSION.md#checklist). Cần xác nhận báo cáo riêng của Bảo và Thắng, kiểm tra YAML, ghi commit chốt và chạy lại A1 trên máy thứ hai.
 
 ## 6. Tổng hợp đóng góp
 
@@ -34,8 +37,10 @@ Chi tiết đóng góp của từng thành viên nằm trong `TEAM.md`.
 
 ## 7. Hạn chế và hướng cải thiện
 
-...
+- Chi phí nhân sự dùng số phút giả lập. Pilot cần ghi thời gian xem lại và làm lại để kiểm tra chi phí so với mốc thủ công 12.000 đ.
+- Đợt chạy thử thiếu đối chứng. Pilot cần đối chứng đồng thời và theo dõi khả năng ảnh hưởng giữa hai nhóm trước khi kết luận hiệu quả.
 
 ## 8. Tài liệu tham khảo
 
-...
+- [Dữ liệu, giả định và công thức Lab 13](../../docs/du_lieu_va_cong_thuc.md)
+- [Yêu cầu từng checkpoint](../../CHECKPOINTS.md)

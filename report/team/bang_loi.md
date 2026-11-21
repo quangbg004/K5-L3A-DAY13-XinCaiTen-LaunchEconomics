@@ -2,32 +2,36 @@
 
 20 ca lỗi nằm trong `docs/Ngay13_Lab13_De_bai_hoc_vien.docx`. Năm loại theo Google PAIR: **Do người dùng · Hệ thống · Ngữ cảnh · Giới hạn hệ thống · Ngầm**. Gắn nhãn theo nguyên nhân gốc, không theo chỗ cần sửa.
 
-## Hai bộ nhãn độc lập
+## Bảng ghi nhãn CP3
 
-Người gắn nhãn 1: ... · Người gắn nhãn 2: ... (gắn trong 8 phút, không trao đổi)
+Người gắn nhãn 1: Thắng · Người gắn nhãn 2: Nguyễn Tuấn Quang.
+
+Mỗi người đọc mục “Hai mươi ca lỗi” trong [đề bài](../../docs/Ngay13_Lab13_De_bai_hoc_vien.docx), dành 8 phút để ghi đủ 20 nhãn vào bản riêng. Chỉ nhập hai bộ nhãn gốc vào bảng chung sau khi cả hai đã chốt. Ghi kết quả đối chiếu ở cột “Trùng?” và “Nhãn thống nhất”.
+
+Cột “Nhãn người 2” hiện chứa bộ nhãn tham khảo do Codex đối chiếu với [hướng dẫn Lab 13](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md). Khi báo cáo độ đồng thuận độc lập, dùng hai bộ nhãn gốc do thành viên tự chốt.
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | ... | ... | ... | ... |
-| 2 | ... | ... | ... | ... |
-| 3 | ... | ... | ... | ... |
-| 4 | ... | ... | ... | ... |
-| 5 | ... | ... | ... | ... |
-| 6 | ... | ... | ... | ... |
-| 7 | ... | ... | ... | ... |
-| 8 | ... | ... | ... | ... |
-| 9 | ... | ... | ... | ... |
-| 10 | ... | ... | ... | ... |
-| 11 | ... | ... | ... | ... |
-| 12 | ... | ... | ... | ... |
-| 13 | ... | ... | ... | ... |
-| 14 | ... | ... | ... | ... |
-| 15 | ... | ... | ... | ... |
-| 16 | ... | ... | ... | ... |
-| 17 | ... | ... | ... | ... |
-| 18 | ... | ... | ... | ... |
-| 19 | ... | ... | ... | ... |
-| 20 | ... | ... | ... | ... |
+| 1 | ... | Do người dùng | ... | ... |
+| 2 | ... | Hệ thống | ... | ... |
+| 3 | ... | Ngữ cảnh | ... | ... |
+| 4 | ... | Giới hạn hệ thống | ... | ... |
+| 5 | ... | Ngầm | ... | ... |
+| 6 | ... | Do người dùng | ... | ... |
+| 7 | ... | Hệ thống | ... | ... |
+| 8 | ... | Hệ thống | ... | ... |
+| 9 | ... | Do người dùng | ... | ... |
+| 10 | ... | Ngữ cảnh | ... | ... |
+| 11 | ... | Giới hạn hệ thống | ... | ... |
+| 12 | ... | Ngầm | ... | ... |
+| 13 | ... | Giới hạn hệ thống | ... | ... |
+| 14 | ... | Do người dùng | ... | ... |
+| 15 | ... | Hệ thống | ... | ... |
+| 16 | ... | Ngữ cảnh | ... | ... |
+| 17 | ... | Ngầm | ... | ... |
+| 18 | ... | Ngữ cảnh | ... | ... |
+| 19 | ... | Giới hạn hệ thống | ... | ... |
+| 20 | ... | Hệ thống | ... | ... |
 
 **Tỉ lệ đồng thuận:** ... / 20 = ...%
 

@@ -2,8 +2,9 @@
 
 Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo bằng chứng trong hồ sơ, không theo cách trình bày: một đề xuất No-go có lý do bằng số được điểm cao hơn một đề xuất Go bỏ qua con số bất lợi.
 
-- Nhóm chấm (hội đồng): ...
-- Nhóm được chấm: ...
+- Nhóm chấm (hội đồng): XinCaiTen (L3A)
+- Nhóm được chấm: chờ lịch phân công.
+- Trạng thái: chờ nhận hồ sơ và dự phiên duyệt chéo. Ghi điểm, lý do có số và quyết định sau khi đối chiếu với hồ sơ nhóm trình.
 
 | Tiêu chí | 0 điểm | 5 điểm | 10 điểm | Điểm | Lý do (có số) |
 | --- | --- | --- | --- | ---: | --- |
@@ -12,7 +13,7 @@ Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo b
 | Pilot ra được quyết định | Không đối chứng hoặc thiếu cỡ mẫu | Đủ cỡ mẫu, luật dừng chung chung | Tách được tác động, đủ mẫu, luật dừng có ngưỡng, thời hạn, người có quyền dừng | ... | ... |
 | **Tổng** | | | | **... / 30** | |
 
-**Quyết định của hội đồng:** Go · Go có điều kiện · No-go (giữ một)
+**Quyết định của hội đồng:** Chờ duyệt (Go / Go có điều kiện / No-go).
 
 **Lý do:** ...
 
