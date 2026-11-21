@@ -238,7 +238,7 @@ if __name__ == '__main__':
     print(f"{'Giới hạn':10s} | {'Tổng trợ lý [sim]':>18s} | {'Không TC':>9s} | {'Cả hệ thống [sim]':>18s} | {'CPS [sim]':>11s}")
     print('-' * 75)
     for k in [1, 2, 3]:
-        res_k = mo_hinh(runs, reqs, max_lan_chay=k if k < 3 else None)
+        res_k = mo_hinh(runs, reqs, max_lan_chay=k)
         khong_tc = len(reqs) - res_k['thanh_cong']
         chi_phi_nv = khong_tc * BASELINE
         ca_he_thong = res_k['tong'] + chi_phi_nv
@@ -261,10 +261,11 @@ if __name__ == '__main__':
     so_yc_ok = len(ok_req_ids)  # 948
     tien_xem_lai_100 = so_yc_ok * 5 * LUONG_PHUT  # 5 phút/lần
 
-    # 2. Đếm ca lam_lai
+    # 2. Đếm ca lam_lai trong phạm vi
     ca_lam_lai = (reqs_p['ket_qua'] == 'lam_lai').sum()  # 48 ca
-    tien_lam_lai_9m = ca_lam_lai * 9 * LUONG_PHUT  # 9 phút/ca
-    tb_phut_lam_lai_that = reqs[reqs['ket_qua'] == 'lam_lai']['phut_lam_lai_simulated'].mean()  # 15.3 phút
+    tien_lam_lai_9m = ca_lam_lai * 9 * LUONG_PHUT  # 9 phút/ca (đề bài cho)
+    # Trung bình phút làm lại thực tế trên toàn bộ ca lam_lai (tài liệu ghi 15,3 phút)
+    tb_phut_lam_lai_that = reqs[reqs['ket_qua'] == 'lam_lai']['phut_lam_lai_simulated'].mean()
     tien_lam_lai_real = ca_lam_lai * tb_phut_lam_lai_that * LUONG_PHUT
 
     # 3. Token + tool
