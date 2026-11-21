@@ -12,63 +12,41 @@ Cột “Nhãn người 2” hiện chứa bộ nhãn tham khảo do Codex đố
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |
-| 1 | ... | Do người dùng | ... | ... |
-| 2 | ... | Hệ thống | ... | ... |
-| 3 | ... | Ngữ cảnh | ... | ... |
-| 4 | ... | Giới hạn hệ thống | ... | ... |
-| 5 | ... | Ngầm | ... | ... |
-| 6 | ... | Do người dùng | ... | ... |
-| 7 | ... | Hệ thống | ... | ... |
-| 8 | ... | Hệ thống | ... | ... |
-| 9 | ... | Do người dùng | ... | ... |
-| 10 | ... | Ngữ cảnh | ... | ... |
-| 11 | ... | Giới hạn hệ thống | ... | ... |
-| 12 | ... | Ngầm | ... | ... |
-| 13 | ... | Giới hạn hệ thống | ... | ... |
-| 14 | ... | Do người dùng | ... | ... |
-| 15 | ... | Hệ thống | ... | ... |
-| 16 | ... | Ngữ cảnh | ... | ... |
-| 17 | ... | Ngầm | ... | ... |
-| 18 | ... | Ngữ cảnh | ... | ... |
-| 19 | ... | Giới hạn hệ thống | ... | ... |
-| 20 | ... | Hệ thống | ... | ... |
-| 1 | Do người dùng | ... | ... | ... |
-| 2 | Hệ thống | ... | ... | ... |
-| 3 | Ngữ cảnh | ... | ... | ... |
-| 4 | Giới hạn hệ thống | ... | ... | ... |
-| 5 | Ngầm | ... | ... | ... |
-| 6 | Do người dùng | ... | ... | ... |
-| 7 | Hệ thống | ... | ... | ... |
-| 8 | Hệ thống | ... | ... | ... |
-| 9 | Do người dùng | ... | ... | ... |
-| 10 | Ngữ cảnh | ... | ... | ... |
-| 11 | Giới hạn hệ thống | ... | ... | ... |
-| 12 | Ngầm | ... | ... | ... |
-| 13 | Giới hạn hệ thống | ... | ... | ... |
-| 14 | Do người dùng | ... | ... | ... |
-| 15 | Hệ thống | ... | ... | ... |
-| 16 | Ngữ cảnh | ... | ... | ... |
-| 17 | Ngầm | ... | ... | ... |
-| 18 | Ngữ cảnh | ... | ... | ... |
-| 19 | Giới hạn hệ thống | ... | ... | ... |
-| 20 | Hệ thống | ... | ... | ... |
+| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 3 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 8 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 9 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Ngầm | Ngầm | Có | Ngầm |
+| 13 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Ngầm | Ngầm | Có | Ngầm |
+| 18 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ đồng thuận:** ... / 20 = ...%
+**Tỉ lệ trùng giữa nhãn của Thắng và bộ nhãn tham khảo:** 20/20 = 100%.
 
 ## Quy tắc phân biệt cho các ca không trùng
 
-Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại.
-
-- ...
+Hai bộ nhãn hiện trùng ở cả 20 ca.
 
 ## Bảng khắc phục cho 5 ca, mỗi loại một ca
 
-Cách phát hiện phải đo được (event, ngưỡng, tần suất). Người phụ trách là một vai trò, không ghi "cả đội".
+Các tín hiệu, ngưỡng và biện pháp dưới đây là đề xuất cho pilot.
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| ... | Do người dùng | ... | ... | ... |
-| ... | Hệ thống | ... | ... | ... |
-| ... | Ngữ cảnh | ... | ... | ... |
-| ... | Giới hạn hệ thống | ... | ... | ... |
-| ... | Ngầm | ... | ... | ... |
+| 1 | Do người dùng | Kiểm tra định dạng và độ dài số tài khoản theo ngân hàng mỗi lần gửi. Ghi `refund_input_invalid` nếu không đạt. | Chặn tạo lệnh hoàn, chỉ rõ ô cần sửa và kiểm tra lại khi khách gửi lại. | Chủ luồng nhập yêu cầu hoàn phí |
+| 7 | Hệ thống | Cảnh báo ngay nếu phản hồi báo hoàn thành công mà sổ cái chưa xác nhận ghi tiền. Nối hai sự kiện theo `trace_id` và mã lệnh hoàn. | Chỉ gửi thông báo thành công sau khi sổ cái xác nhận. Nếu vẫn gặp 503 sau 3 lần thử, ghi trạng thái chờ đối soát và chuyển nhân viên tiếp nhận. | Kỹ sư phụ trách tích hợp sổ cái |
+| 18 | Ngữ cảnh | Hằng tuần, đếm `request_reopened_7d` có lý do “hoàn thiếu” trong số yêu cầu đã đối chiếu và xác nhận hoàn đúng tiền. | Hiển thị phí gốc, tỉ lệ hoàn và phép tính ngay trong tin nhắn, ví dụ 30.000 đ × 50% = 15.000 đ. | Trưởng nhóm CSKH |
+| 19 | Giới hạn hệ thống | Với mỗi yêu cầu, kiểm tra ngày đơn trước khi tra cứu. Ghi `refund_lookup_out_of_range` nếu ngày đơn nằm ngoài cửa sổ dữ liệu 12 tháng. | Giải thích giới hạn tra cứu cho khách và chuyển nhân viên có quyền tra hồ sơ lưu trữ, kèm mã đơn, ngày đơn và lý do chuyển. | Trưởng ca xử lý hoàn phí |
+| 17 | Ngầm | Hằng ngày, tính lại mức hoàn của các đơn dưới 2 kg theo phiên bản bảng giá có hiệu lực cho từng đơn. Ghi `refund_audit_mismatch` và cảnh báo khi có ít nhất 1 khoản chênh lệch. | Vô hiệu hóa bộ nhớ đệm khi bảng giá đổi, lưu phiên bản bảng giá cho từng lệnh hoàn và rà soát lại các đơn đã dùng bản cũ để xử lý chênh lệch. | Kỹ sư phụ trách dịch vụ bảng giá |
