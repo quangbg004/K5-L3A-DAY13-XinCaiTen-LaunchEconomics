@@ -8,6 +8,8 @@ Người gắn nhãn 1: Thắng · Người gắn nhãn 2: Nguyễn Tuấn Quang
 
 Mỗi người đọc mục “Hai mươi ca lỗi” trong [đề bài](../../docs/Ngay13_Lab13_De_bai_hoc_vien.docx), dành 8 phút để ghi đủ 20 nhãn vào bản riêng. Chỉ nhập hai bộ nhãn gốc vào bảng chung sau khi cả hai đã chốt. Ghi kết quả đối chiếu ở cột “Trùng?” và “Nhãn thống nhất”.
 
+Cột “Nhãn người 2” hiện chứa 20 nhãn do Codex điền theo tài liệu hướng dẫn. Quang cần xác nhận và cung cấp bản tự chốt trước khi dùng cột này để báo cáo mức đồng thuận độc lập.
+
 
 | Ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- |

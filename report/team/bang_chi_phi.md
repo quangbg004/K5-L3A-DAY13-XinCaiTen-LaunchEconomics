@@ -29,7 +29,7 @@ Số được tính lại từ `src/logix_runs.csv` và `src/logix_requests.csv`
 
 ## A3 · Tách theo loại yêu cầu
 
-| Loại | Số yêu cầu | Tỉ lệ thành công | Số lần chạy mỗi yêu cầu | CPS (đ) | So với 12.000 đ |
+| Loại | Số yêu cầu | Tỉ lệ thành công | Số lần chạy mỗi yêu cầu | CPS (đ, simulated) | So với 12.000 đ (simulated) |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | noi_dia | 824 | **95,0%** | 1,11 | **2.696** | **0,22×** |
 | hang_nang | 158 | **74,1%** | 1,47 | **8.221** | **0,69×** |
@@ -68,12 +68,14 @@ CPS gốc dùng làm mốc: **4.472 đ**. Các giá trị dưới đây được
 
 ## B2 · Đổi một cặp và xếp hạng
 
+Các CPS và phần trăm thay đổi ở mục này là `simulated`.
+
 - Giá token gấp đôi cùng lúc tỉ lệ xem lại gấp đôi: CPS **6.543 đ**, tăng **46,3%**. Mức tăng bằng tổng tác động riêng: **5,6% + 40,7% = 46,3%**, do mô hình cộng tuyến tính theo từng khoản chi phí.
 - Ba yếu tố nhạy nhất: **1. số ca làm lại (+51,8%) · 2. tỉ lệ xem lại (+40,7%) · 3. lương nhân viên (+23,1%)**. Giá token chỉ làm CPS tăng **5,6%** khi tăng gấp đôi.
 
 ## B3 · Giới hạn chạy lại có thật sự rẻ hơn
 
-| Giới hạn | Tổng chi phí trợ lý (đ) | Số yêu cầu không thành công | Chi phí cả hệ thống (đ) | CPS trợ lý (đ) |
+| Giới hạn | Tổng chi phí trợ lý (đ, simulated) | Số yêu cầu không thành công | Chi phí cả hệ thống (đ, simulated) | CPS trợ lý (đ, simulated) |
 | --- | ---: | ---: | ---: | ---: |
 | 1 lần | **3.621.781** | **319** | **7.449.781** | **4.111** |
 | 2 lần | **4.093.220** | **234** | **6.901.220** | **4.237** |
@@ -84,7 +86,8 @@ CPS gốc dùng làm mốc: **4.472 đ**. Các giá trị dưới đây được
 ## B4 · Nếu phải xem lại tất cả (noi_dia + hang_nang)
 
 - Có **948** yêu cầu trong phạm vi có ít nhất một lần `status=ok`; xem lại 100% × 5 phút × 2.000 đ = **9.480.000 đ**. Token + tool **224.513 đ**. Có **48** ca làm lại; trung bình toàn bộ **74** ca làm lại trong dữ liệu là **15,297 phút/ca (simulated)**, nên chi phí làm lại trong pilot là **1.468.541 đ (simulated)**.
-- Tổng **11.173.054 đ / 900 việc thành công = 12.415 đ/việc (simulated)**, xấp xỉ **1,03×** baseline 12.000 đ. Xem lại 100% làm mất lợi thế chi phí; pilot phải đo cách giảm tỷ lệ xem lại an toàn, không chỉ đo token.
+- Với giả định **9 phút/ca làm lại**, tổng chi phí **10.568.513 đ / 900 việc thành công = 11.743 đ/việc** (`simulated`), bằng **0,98×** mốc 12.000 đ.
+- Với khoảng **15,3 phút/ca làm lại** theo mẫu, tổng **11.173.054 đ / 900 việc thành công = 12.415 đ/việc** (`simulated`), bằng **1,03×** mốc 12.000 đ. Pilot cần đo thời gian xem lại và làm lại để biết có thể giảm tỷ lệ xem lại an toàn hay không.
 
 ## Phép tính đối chiếu độc lập của Bảo
 

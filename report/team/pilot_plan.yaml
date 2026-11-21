@@ -34,7 +34,13 @@ pilot:
     control_share: 0.5
     randomized: true
     stratification: "Phân tầng theo depot; bốc thăm 1:1 trong từng depot; lưu seed, danh sách staff_id và ngày phân nhóm."
+    readiness: "Trước khi bốc thăm, Giám đốc vận hành xác nhận 40 staff_id đủ điều kiện tại 6 depot và sản lượng dự kiến theo người. Mẫu chạy thử trong phạm vi chỉ có 20 staff_id. Hoãn lịch nếu chưa đủ 20 nhân viên mỗi nhóm."
   rollout: [0.10, 0.25, 0.50] # 4 -> 10 -> 20 nhân viên dùng trợ lý; 20 nhân viên còn lại là đối chứng cùng thời gian.
+  schedule:
+    start_date: "2026-11-30"
+    ramp_up: "Dự kiến 30/11–06/12 bật cho 4 người, 07–13/12 bật cho 10 người nếu đạt điều kiện an toàn và sử dụng."
+    measurement_window: "Dự kiến 14–27/12/2026, khi đủ 20 người mỗi nhóm. Đạt mốc 299 yêu cầu đủ điều kiện/người trong 10 ngày làm việc cần khoảng 30 yêu cầu/người/ngày. Xác nhận sản lượng trước khi bắt đầu."
+    follow_up: "Cho phép 24 giờ để đóng yêu cầu cuối ngày 27/12 và theo dõi mở lại thêm 7 ngày sau khi đóng. Nếu chưa đủ mẫu hoặc chưa đủ thời gian theo dõi, dời ngày quyết định."
   primary_metric:
     name: "dong_trong_24h_khong_mo_lai_7_ngay"
     baseline: 0.70
@@ -49,12 +55,12 @@ pilot:
     note: "MDE 6 điểm là đánh đổi vì chỉ có 40 nhân viên. Nếu hiệu ứng thật là 5 điểm, power xấp xỉ 0,64."
   identifiability:
     concurrent_control: "Có: 20 nhân viên đối chứng làm cùng tuần, cùng depot và cùng điều kiện vận hành với 20 nhân viên can thiệp."
-    spillover_risk: "Nhân viên cùng depot có thể chia sẻ gợi ý; giới hạn quyền truy cập theo staff_id, không cấp quyền trợ lý cho nhóm đối chứng, log mọi lượt mở và rà soát truy cập chéo hằng tuần."
-    predeclared: "Trước ngày bắt đầu, khóa danh sách nhân viên, seed ngẫu nhiên, chỉ số chính, MDE 6 điểm, alpha 0,05, power 0,80, ba luật dừng và ngày ra quyết định 2027-01-05."
+    spillover_risk: "Nhân viên cùng depot có thể chia sẻ gợi ý; giới hạn quyền truy cập theo staff_id và rà soát truy cập chéo hằng tuần. Giữ người tham gia theo phân bổ ban đầu trong phân tích chính."
+    predeclared: "Trước ngày bắt đầu, khóa danh sách nhân viên, seed ngẫu nhiên, chỉ số chính, MDE 6 điểm, alpha 0,05, power 0,80, ba luật dừng và ngày quyết định dự kiến 2027-01-05."
   stop_rules:
-    - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm can thiệp cao hơn nhóm đối chứng từ 2 điểm phần trăm trở lên hoặc vượt 6% tuyệt đối, hoặc phát hiện ít nhất 1 ca hoàn trùng TRONG bất kỳ cửa sổ 24 giờ nào THÌ Giám đốc vận hành tắt cờ trợ lý trong 30 phút, chuyển toàn bộ yêu cầu sang nhân viên và yêu cầu kiểm tra sổ cái KHÔNG THÌ không được tăng rollout sang bước tiếp theo khi chưa có báo cáo an toàn."
+    - "NẾU tỉ lệ mo_lai_trong_7_ngay của nhóm can thiệp cao hơn nhóm đối chứng từ 2 điểm phần trăm trở lên hoặc vượt 6% tuyệt đối trên các yêu cầu đã đủ thời gian theo dõi, hoặc phát hiện ít nhất 1 ca hoàn trùng TRONG bất kỳ cửa sổ 24 giờ nào THÌ Giám đốc vận hành tắt cờ trợ lý trong 30 phút kể từ lúc phát hiện, chuyển toàn bộ yêu cầu sang nhân viên và yêu cầu kiểm tra sổ cái KHÔNG THÌ không được tăng rollout sang bước tiếp theo khi chưa có báo cáo an toàn."
     - "NẾU CPS của nhóm can thiệp vượt 8.000 đ/việc thành công trong 2 tuần liên tiếp, với tối thiểu 100 việc thành công mỗi tuần TRONG hai tuần đánh giá liên tiếp THÌ PM trợ lý hoàn phí đóng băng rollout, thu hẹp về noi_dia và giới hạn tối đa 2 lần chạy để phân tích lại chi phí KHÔNG THÌ không được mở rộng ngoài noi_dia + hang_nang."
-    - "NẾU tỉ lệ sử dụng trợ lý trên tổng yêu cầu đủ điều kiện của nhóm can thiệp thấp hơn 60% TRONG 7 ngày liên tiếp THÌ Trưởng nhóm CSKH dừng tăng rollout, phỏng vấn ít nhất 5 nhân viên trong 3 ngày và ghi nhận nguyên nhân không sử dụng KHÔNG THÌ không được chuyển sang bước rollout tiếp theo nếu chưa đạt ngưỡng sử dụng."
+    - "NẾU tỉ lệ sử dụng trợ lý trên tổng yêu cầu đủ điều kiện do nhân viên đã được bật trợ lý trong nhóm can thiệp xử lý thấp hơn 60% TRONG 7 ngày liên tiếp THÌ Trưởng nhóm CSKH dừng tăng rollout, phỏng vấn ít nhất 5 nhân viên trong 3 ngày và ghi nhận nguyên nhân không sử dụng KHÔNG THÌ không được chuyển sang bước rollout tiếp theo nếu chưa đạt ngưỡng sử dụng."
   interim_looks: "Hằng ngày chỉ xem chỉ số an toàn và sự cố hoàn trùng; đánh giá chi phí và mức sử dụng theo tuần; không kiểm định lặp chỉ số chính để tuyên bố hiệu quả trước ngày chốt."
   rollback: "Giám đốc vận hành LogiX-VN có quyền tắt feature flag; hiệu lực tối đa 30 phút. Sau khi tắt, mọi yêu cầu chuyển về quy trình nhân viên tự xử lý; bộ phận vận hành đối soát các giao dịch đang chờ."
   decision_date: "2027-01-05"

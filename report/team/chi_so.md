@@ -18,9 +18,10 @@ Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý 
 
 | Event | Ai tạo | Thuộc tính chính | Thời điểm |
 | --- | --- | --- | --- |
-| `request_created` | Hệ thống CSKH | `request_id`, `depot`, `loai`, `so_tien_vnd`, `trace_id` | Khi khách gửi yêu cầu hoàn phí |
+| `request_created` | Hệ thống CSKH | `request_id`, `created_at`, `staff_id`, `depot`, `loai`, `so_tien_vnd`, `pilot_arm`, `eligible_for_pilot`, `assistant_enabled`, `trace_id` | Khi tạo yêu cầu và đã định tuyến, trước khi trợ lý chạy |
 | `agent_run_finished` | Trợ lý hoàn phí | `run_id`, `request_id`, `attempt`, `status`, `tokens_in`, `tokens_out`, `tool_calls`, `trace_id` | Khi kết thúc mỗi lần chạy của agent |
 | `review_decision_logged` | Giao diện nhân viên CSKH | `request_id`, `staff_id`, `quyet_dinh_xem_lai` (`giu`/`sua`/`bo`), `review_seconds`, `trace_id` | Khi nhân viên xem lại và chọn giữ/sửa/bỏ |
+| `refund_rework_completed` | Giao diện nhân viên CSKH | `rework_id`, `request_id`, `staff_id`, `rework_seconds`, `trace_id` | Khi hoàn tất một lượt làm lại. Ghi thời gian thao tác, bỏ thời gian chờ |
 | `request_closed` | Hệ thống CSKH | `request_id`, `dong_trong_24h`, `ket_qua`, `trace_id` | Khi yêu cầu được đóng và phản hồi khách |
 | `request_reopened_7d` | Hệ thống CSKH | `request_id`, `days_since_close`, `reopen_reason`, `trace_id` | Khi khách mở lại yêu cầu trong vòng 7 ngày |
 | `refund_audit_mismatch` | Hệ thống đối soát/Sổ cái | `request_id`, `expected_vnd`, `actual_vnd`, `mismatch_type`, `trace_id` | Khi job đối soát phát hiện hoàn sai tiền hoặc trùng lệnh |
@@ -32,6 +33,12 @@ Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý 
 - **Chỉ số an toàn — Tỉ lệ lỗi lọt đến khách:** tính từ `request_reopened_7d` chia tổng `request_created`.
 - **Chỉ số dùng đề xuất — Tỉ lệ chấp nhận nguyên bản:** tính từ `review_decision_logged` (đếm `quyet_dinh_xem_lai == 'giu'` chia tổng `review_decision_logged`).
 - **Chỉ số an toàn đề xuất — Tỉ lệ hoàn tiền sai mức/trùng lệnh:** tính từ `refund_audit_mismatch` chia tổng `request_closed`.
+
+### Đo các ngưỡng dừng của pilot
+
+- **Mức sử dụng 60%.** Trong cùng cửa sổ 7 ngày, lấy các yêu cầu có `pilot_arm = treatment`, `eligible_for_pilot = true` và `assistant_enabled = true` lúc định tuyến. Chia số yêu cầu có ít nhất một `agent_run_finished` cho tổng số yêu cầu đã lấy. Đếm mỗi `request_id` một lần. Xác định đủ điều kiện theo loại yêu cầu và depot trong kế hoạch.
+- **CPS 8.000 đ.** Nối theo `request_id` trên nhóm yêu cầu đã đủ thời gian theo dõi của từng tuần. Cộng token và tool của mọi lần chạy, tiền thời gian từ `review_seconds` và `rework_seconds`, rồi chia số yêu cầu có `ket_qua = thanh_cong`. Đếm mỗi lượt làm lại một lần theo `rework_id` và dùng thời gian đo thực tế.
+- **Mở lại trong 7 ngày.** So sánh trên các nhóm yêu cầu đã đủ thời gian theo dõi ở cả hai nhánh, đếm một lần theo `request_id`. Cảnh báo ca hoàn trùng ngay khi `refund_audit_mismatch` ghi nhận giao dịch trùng.
 
 ## E2 · Rủi ro kinh tế
 

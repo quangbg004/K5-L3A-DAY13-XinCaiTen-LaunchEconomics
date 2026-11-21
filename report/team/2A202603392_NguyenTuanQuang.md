@@ -16,7 +16,7 @@
 
 - Tổng hợp đủ bảy mục trong hồ sơ launch v0, kết nối kết quả kinh tế, bảng lỗi, kế hoạch pilot và chỉ số. Đề xuất Go có điều kiện vì CPS biến đổi ở kịch bản xem lại 100% lên tới 12.415 đ (`simulated`) và thiết kế theo nhân viên chỉ đủ lực thống kê cho chênh lệch 6 điểm.
 - Gộp 20 ca theo số thứ tự và đề xuất cách khắc phục cho 5 loại lỗi. Nhãn Thắng trùng bộ tham khảo ở 20/20 ca. Cột Người 2 đang sử dụng bộ tham khảo do Codex đối chiếu, nên phần đánh giá đồng thuận độc lập vẫn còn thiếu.
-- Tổng hợp báo cáo nhóm và chuẩn bị phiếu chấm. Nhóm chưa duyệt chéo Gate 2a.
+- Tổng hợp báo cáo nhóm và cập nhật phiếu Gate 2a cho 3changngulam, gồm điểm XinCaiTen chấm nhóm bạn và phản hồi của đội trình về luật dừng khi hoàn tiền trùng.
 
 ## 4. Bằng chứng
 
@@ -27,8 +27,8 @@
 ## 5. Công cụ AI đã dùng
 
 - Codex hỗ trợ rà checkpoint, chạy code nhóm, đối chiếu số đếm trong CSV, tra nhãn tham khảo, đề xuất biện pháp khắc phục và tổng hợp hồ sơ.
-- Kiểm tra khi đóng gói bằng Codex: chạy `python lab13.py` từ `src/`, đối chiếu A1, B4 và D1 với hồ sơ, kiểm tử số và mẫu số của ba chỉ số từ CSV, đọc YAML và rà đủ file.
+- Kiểm tra khi đóng gói bằng Codex: chạy `python lab13.py` từ `src/` trên máy Quang, đạt A1 với **1,20 · 1,25 · 1,25**. Đối chiếu B4 và D1 với hồ sơ, kiểm tử số và mẫu số của ba chỉ số từ CSV, đọc YAML và rà đủ file.
 
 ## 6. Tự đánh giá
 
-- Hồ sơ đã tổng hợp bằng chứng từ các checkpoint và nêu rõ đánh đổi về chi phí và lực thống kê. Bằng chứng cần bổ sung gồm bộ nhãn độc lập của người thứ hai và kết quả duyệt chéo thực tế.
+- Hồ sơ đã tổng hợp bằng chứng từ các checkpoint và nêu rõ đánh đổi về chi phí và lực thống kê. Cần xác nhận bản nhãn tự chốt của Người 2 và bổ sung điểm, nhận xét hội đồng dành cho XinCaiTen khi có.

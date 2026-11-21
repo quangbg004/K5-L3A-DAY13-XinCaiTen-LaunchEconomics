@@ -116,7 +116,7 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - Gộp hai cột nhãn và đề xuất 5 biện pháp khắc phục, có tín hiệu phát hiện và vai trò phụ trách. Bộ nhãn cột 2 đến từ tài liệu tham khảo do Codex đối chiếu. [Bảng lỗi](report/team/bang_loi.md)
 - Tổng hợp đủ 7 mục và đề xuất có điều kiện cho pilot. [Hồ sơ launch v0](report/team/ho_so_launch_v0.md) · [Báo cáo nhóm](report/team/group_report.md)
-- Chuẩn bị phiếu chấm. Nhóm chưa duyệt chéo. [Phiếu chấm](report/team/phieu_cham.md) · [Báo cáo cá nhân](report/team/2A202603392_NguyenTuanQuang.md)
+- Cập nhật phiếu chấm 3changngulam, ghi điểm XinCaiTen chấm nhóm bạn và phản hồi của đội trình. [Phiếu chấm](report/team/phieu_cham.md) · [Báo cáo cá nhân](report/team/2A202603392_NguyenTuanQuang.md)
 
 ## HoVaTen-MSSV (Mẫu cho các thành viên khác)
 
