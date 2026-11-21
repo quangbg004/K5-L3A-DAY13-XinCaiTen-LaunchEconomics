@@ -25,7 +25,7 @@
 
 - File `report/team/bang_loi.md`: cột `Nhãn người 1`, tỉ lệ đồng thuận, mục quy tắc phân biệt và bảng khắc phục 5 ca.
 - File `report/team/chi_so.md`: bảng đặc tả chỉ số E1, bảng 6 event có `trace_id`, mục kiểm tra chéo và bảng rủi ro kinh tế E2.
-- Commit chốt: `[điền mã commit sau khi push lên GitHub]`
+- Commit chốt: `b88b21561e49cc7c93e2e235443bf58da5d21fb8`
 
 ## 5. Công cụ AI đã dùng
 
