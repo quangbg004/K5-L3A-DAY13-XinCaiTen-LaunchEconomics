@@ -4,20 +4,18 @@
 
 - Tên nhóm: XinCaiTen
 - Lớp: L3A
-- Repo nhóm: [K5-L3A-DAY13-XinCaiTen-LaunchEconomics](https://github.com/quangbg004/K5-L3A-DAY13-XinCaiTen-LaunchEconomics)
-- Nhánh nộp: `main`. Commit chốt: cập nhật khi nhóm đóng gói bài nộp.
+- Repo nhóm: `K5-L3A-DAY13-XinCaiTen-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
+- URL repo và nhánh nộp: [GitHub · main](https://github.com/quangbg004/K5-L3A-DAY13-XinCaiTen-LaunchEconomics/tree/main)
+- Commit chốt nội dung: cập nhật sau khi hợp nhất bản nộp.
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Nguyễn Thế Trường | 2A202603393 | truongnt20112004@gmail.com |  | Người viết code (CP1–CP2) |
-|   2 | Bảo | | | | Người kiểm số (CP1–CP2) & Coder CP4 |
-|   3 | Thắng | | | | Người gắn nhãn 1 (CP3) & Chỉ số (CP5) |
-|   4 | Nguyễn Tuấn Quang | 2A202603392 | | | Người gắn nhãn 2, giữ hồ sơ & duyệt Gate 2a |
 |   2 | Dương Quang Bảo | 2A202603362 | dumabao69@gmail.com | wadiobao | Người kiểm số (CP1–CP2) & Coder CP4 |
-|   3 |        |      |       |        | Người gắn nhãn 1 (CP3) & Chỉ số (CP5) |
-|   4 |        |      |       |        | Người gắn nhãn 2, giữ hồ sơ & duyệt Gate 2a |
+|   3 | Kiều Văn Thắng | 2A202603424 | 26ai.thangkv@vinuni.edu.vn | katsu1154 | Người gắn nhãn 1 (CP3) & Chỉ số (CP5) |
+|   4 | Nguyễn Tuấn Quang | 2A202603392 | | quangbg004 | Người gắn nhãn 2, giữ hồ sơ & duyệt Gate 2a |
 
 Bốn vai của lab:
 
@@ -60,18 +58,7 @@ Sao chép mục dưới đây cho từng thành viên.
 - Báo cáo cá nhân `report/team/2A202603393_NguyenTheTruong.md`.
 - Commit Git `2e89a7f`.
 
-## NguyenTuanQuang-2A202603392
-
-### Phần việc phụ trách
-
-- Gắn nhãn độc lập lượt 2 tại CP3, giữ hồ sơ launch v0, điều phối duyệt chéo Gate 2a và tổng hợp báo cáo nhóm.
-
-### Đóng góp và bằng chứng
-
-- Phần tổng hợp đã có bản nháp trong [hồ sơ launch v0](report/team/ho_so_launch_v0.md), [báo cáo nhóm](report/team/group_report.md) và [báo cáo cá nhân](report/team/2A202603392_NguyenTuanQuang.md).
-- Kết quả CP3 và duyệt chéo sẽ được cập nhật khi có bằng chứng thực tế.
-
-## Dương Quang Bảo - 2A202503362
+## Dương Quang Bảo - 2A202603362
 
 ### Phần việc phụ trách
 
@@ -97,6 +84,39 @@ Sao chép mục dưới đây cho từng thành viên.
 - `src/logix_runs.csv` – Dữ liệu các lần chạy dùng để tính token, tool và tỷ lệ thành công.
 - `src/lab13.py` – Mã nguồn và công thức tính toán được sử dụng để kiểm tra kết quả.
 
+## KieuVanThang-2A202603424
+
+### Phần việc phụ trách
+
+- Theo dõi tiến độ và điều kiện "Xong khi" của cả nhóm qua 5 checkpoint trong `CHECKPOINTS.md`.
+- **CP3 (Nhiệm vụ C):** Tự gắn nhãn độc lập lượt 1 cho 20 ca lỗi theo 5 loại của Google PAIR, lưu riêng trước khi so với người gắn nhãn 2; tổng hợp hai bộ nhãn vào `report/team/bang_loi.md`, tính tỉ lệ đồng thuận, viết quy tắc xử lý bất đồng và cùng người gắn nhãn 2 hoàn thiện bảng khắc phục 5 ca.
+- **CP5 (Nhiệm vụ E1, E2):** Hoàn thiện `report/team/chi_so.md` gồm 3 chỉ số tính thử, 1 chỉ số sử dụng và 1 chỉ số an toàn đề xuất thêm, danh sách ít nhất 6 event có `trace_id` (kèm kiểm tra chéo), và ít nhất 2 dòng rủi ro kinh tế lấy số từ bảng độ nhạy CP2; gửi kết quả cho người giữ hồ sơ trước 17:00.
+
+### Đóng góp cụ thể
+
+- Hoàn thành bộ nhãn độc lập lượt 1 cho 20 ca lỗi theo nguyên nhân gốc (không sửa lại bộ nhãn gốc sau khi so).
+- Đối chiếu trong `report/team/bang_loi.md`: bộ nhãn của Thắng trùng bộ tham khảo do Codex đối chiếu ở 20/20 ca.
+- Cùng người gắn nhãn 2 xây dựng bảng khắc phục 5 ca (đủ 5 loại: Do người dùng, Hệ thống, Ngữ cảnh, Giới hạn hệ thống, Ngầm), đảm bảo mỗi ca có cách phát hiện đo được (event, ngưỡng, tần suất) và một vai trò phụ trách cụ thể.
+- Hoàn thiện `report/team/chi_so.md`: điền kết quả tính thử 3 chỉ số trên 1.200 yêu cầu, đề xuất thêm chỉ số sử dụng (*Tỉ lệ chấp nhận nguyên bản*) và chỉ số an toàn (*Tỉ lệ hoàn tiền sai mức/trùng lệnh*), thiết kế 6 event có `trace_id` kèm kiểm tra chéo công thức, và bổ sung 2 dòng rủi ro kinh tế dựa trên bảng độ nhạy CP2.
+- Rà soát checklist nộp bài của nhóm (nhãn `simulated`, không dùng từ bị cấm, đủ file đúng tên).
+
+### Bằng chứng
+
+- File `report/team/bang_loi.md`: cột `Nhãn người 1`, tỉ lệ đồng thuận, mục quy tắc phân biệt và bảng khắc phục 5 ca.
+- File `report/team/chi_so.md`: bảng đặc tả chỉ số E1, bảng 6 event có `trace_id`, mục kiểm tra chéo và bảng rủi ro kinh tế E2.
+- Commit hoàn thành bảng chỉ số: `b88b215`.
+
+## NguyenTuanQuang-2A202603392
+
+### Phần việc phụ trách
+
+- Gắn nhãn độc lập lượt 2 tại CP3, giữ hồ sơ launch v0, điều phối duyệt chéo Gate 2a và tổng hợp báo cáo nhóm.
+
+### Đóng góp và bằng chứng
+
+- Gộp hai cột nhãn và đề xuất 5 biện pháp khắc phục, có tín hiệu phát hiện và vai trò phụ trách. Bộ nhãn cột 2 đến từ tài liệu tham khảo do Codex đối chiếu. [Bảng lỗi](report/team/bang_loi.md)
+- Tổng hợp đủ 7 mục và đề xuất có điều kiện cho pilot. [Hồ sơ launch v0](report/team/ho_so_launch_v0.md) · [Báo cáo nhóm](report/team/group_report.md)
+- Chuẩn bị phiếu chấm. Nhóm chưa duyệt chéo. [Phiếu chấm](report/team/phieu_cham.md) · [Báo cáo cá nhân](report/team/2A202603392_NguyenTuanQuang.md)
 
 ## HoVaTen-MSSV (Mẫu cho các thành viên khác)
 
