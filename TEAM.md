@@ -15,6 +15,9 @@
 |   2 | Bảo | | | | Người kiểm số (CP1–CP2) & Coder CP4 |
 |   3 | Thắng | | | | Người gắn nhãn 1 (CP3) & Chỉ số (CP5) |
 |   4 | Nguyễn Tuấn Quang | 2A202603392 | | | Người gắn nhãn 2, giữ hồ sơ & duyệt Gate 2a |
+|   2 | Dương Quang Bảo | 2A202603362 | dumabao69@gmail.com | wadiobao | Người kiểm số (CP1–CP2) & Coder CP4 |
+|   3 |        |      |       |        | Người gắn nhãn 1 (CP3) & Chỉ số (CP5) |
+|   4 |        |      |       |        | Người gắn nhãn 2, giữ hồ sơ & duyệt Gate 2a |
 
 Bốn vai của lab:
 
@@ -67,6 +70,33 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - Phần tổng hợp đã có bản nháp trong [hồ sơ launch v0](report/team/ho_so_launch_v0.md), [báo cáo nhóm](report/team/group_report.md) và [báo cáo cá nhân](report/team/2A202603392_NguyenTuanQuang.md).
 - Kết quả CP3 và duyệt chéo sẽ được cập nhật khi có bằng chứng thực tế.
+
+## Dương Quang Bảo - 2A202503362
+
+### Phần việc phụ trách
+
+- Kiểm tra và đối chiếu độc lập các phép tính chi phí trong CP1–CP2.
+- Hoàn thiện bảng chi phí `report/team/bang_chi_phi.md` từ A1 đến B4.
+- Phụ trách CP4: tính toán cỡ mẫu D1, phân tích tính khả thi của pilot và hoàn thiện kế hoạch `report/team/pilot_plan.yaml`.
+- Đề xuất phương pháp phân nhóm, kiểm soát rủi ro và xây dựng các điều kiện dừng pilot.
+
+### Đóng góp cụ thể
+
+- Tính toán độc lập CPS tại A2, xác nhận chi phí trung bình cho mỗi yêu cầu thành công là khoảng **4.472 VND**.
+- Phân tích chi phí theo từng loại yêu cầu, xác định `quoc_te` có CPS khoảng **22.515 VND**, cao hơn baseline nhân viên tự xử lý.
+- Hoàn thiện các kịch bản phân tích độ nhạy B1–B4, xác định ba yếu tố ảnh hưởng lớn nhất đến CPS là số ca làm lại, thời gian xem lại và chi phí nhân công.
+- Tính toán cỡ mẫu D1, đánh giá giới hạn 40 nhân viên hiện có và đề xuất MDE 6 điểm phần trăm để phù hợp với nguồn lực pilot.
+- Xây dựng phương án pilot gồm 20 nhân viên nhóm can thiệp và 20 nhân viên nhóm đối chứng, phân nhóm ngẫu nhiên có phân tầng theo depot.
+- Hoàn thiện 3 luật dừng pilot nhằm kiểm soát rủi ro vận hành, chi phí và mức độ sử dụng hệ thống.
+
+### Bằng chứng
+
+- `report/team/bang_chi_phi.md` – Bảng tính chi phí và phân tích độ nhạy A1–B4.
+- `report/team/pilot_plan.yaml` – Kế hoạch pilot, cỡ mẫu D1, thiết kế D2 và các điều kiện dừng.
+- `src/logix_requests.csv` – Dữ liệu yêu cầu dùng để đối chiếu chi phí và tỷ lệ thành công.
+- `src/logix_runs.csv` – Dữ liệu các lần chạy dùng để tính token, tool và tỷ lệ thành công.
+- `src/lab13.py` – Mã nguồn và công thức tính toán được sử dụng để kiểm tra kết quả.
+
 
 ## HoVaTen-MSSV (Mẫu cho các thành viên khác)
 
