@@ -13,7 +13,7 @@
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Nguyễn Thế Trường | 2A202603393 | truongnt20112004@gmail.com |  | Người viết code (CP1–CP2) |
 |   2 | Dương Quang Bảo | 2A202603362 | dumabao69@gmail.com | wadiobao | Người kiểm số (CP1–CP2) & Coder CP4 |
-|   3 |        |      |       |        | Người gắn nhãn 1 (CP3) & Chỉ số (CP5) |
+|   3 | Kiều Văn Thắng | 2A202603424 | 26ai.thangkv@vinuni.edu.vn | katsu1154 | Người gắn nhãn 1 (CP3) & Chỉ số (CP5) |
 |   4 |        |      |       |        | Người gắn nhãn 2, giữ hồ sơ & duyệt Gate 2a |
 
 Bốn vai của lab:
