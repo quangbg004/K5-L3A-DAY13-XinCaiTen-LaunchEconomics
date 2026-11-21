@@ -4,7 +4,7 @@
 
 - Họ tên: Kiều Văn Thắng
 - MSSV: 2A202603424
-- Email: [điền email của bạn]
+- Email: 26ai.thangkv@vinuni.edu.vn
 - Vai trong nhóm: Người gắn nhãn 1 (CP3), lập bảng chỉ số (CP5) và theo dõi điều kiện hoàn thành theo `CHECKPOINTS.md`
 
 ## 2. Phần việc phụ trách
@@ -16,7 +16,7 @@
 ## 3. Đóng góp cụ thể
 
 - Hoàn thành bộ nhãn độc lập lượt 1 cho 20 ca lỗi theo nguyên nhân gốc (không sửa lại bộ nhãn gốc sau khi so).
-- Tổng hợp bảng so sánh hai bộ nhãn vào `report/team/bang_loi.md`, tính tỉ lệ đồng thuận đạt [.../20 = ...%], thống nhất nhãn và ghi quy tắc phân biệt cho các ca không trùng.
+- Tổng hợp bảng so sánh hai bộ nhãn vào `report/team/bang_loi.md`, tính tỉ lệ đồng thuận đạt [20/20 = 100%], thống nhất nhãn và ghi quy tắc phân biệt cho các ca không trùng.
 - Cùng người gắn nhãn 2 xây dựng bảng khắc phục 5 ca (đủ 5 loại: Do người dùng, Hệ thống, Ngữ cảnh, Giới hạn hệ thống, Ngầm), đảm bảo mỗi ca có cách phát hiện đo được (event, ngưỡng, tần suất) và một vai trò phụ trách cụ thể.
 - Hoàn thiện `report/team/chi_so.md`: điền kết quả tính thử 3 chỉ số trên 1.200 yêu cầu, đề xuất thêm chỉ số sử dụng (*Tỉ lệ chấp nhận nguyên bản*) và chỉ số an toàn (*Tỉ lệ hoàn tiền sai mức/trùng lệnh*), thiết kế 6 event có `trace_id` kèm kiểm tra chéo công thức, và bổ sung 2 dòng rủi ro kinh tế dựa trên bảng độ nhạy CP2.
 - Rà soát checklist nộp bài của nhóm (nhãn `simulated`, không dùng từ bị cấm, đủ file đúng tên).

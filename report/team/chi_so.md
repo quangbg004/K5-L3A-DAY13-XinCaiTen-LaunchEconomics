@@ -4,9 +4,9 @@
 
 | Loại | Chỉ số | Công thức | Tính thử trên 1.200 yêu cầu |
 | --- | --- | --- | --- |
-| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu | ... *(chỉ số trong đợt chạy thử là ...)* |
-| Dùng | Tỉ lệ bỏ qua gợi ý | `quyet_dinh_xem_lai` là `sua` hoặc `bo`, chia số yêu cầu được xem lại | ... *(chỉ số trong đợt chạy thử là ...)* |
-| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu | ... *(chỉ số trong đợt chạy thử là ...)* |
+| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu | Chỉ số trong đợt chạy thử là **82,83%** |
+| Dùng | Tỉ lệ bỏ qua gợi ý | `quyet_dinh_xem_lai` là `sua` hoặc `bo`, chia số yêu cầu được xem lại | Chỉ số trong đợt chạy thử là **27,12%** |
+| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu | Chỉ số trong đợt chạy thử là **4,25%** |
 | Dùng | Nhóm tự đề xuất: Tỉ lệ chấp nhận nguyên bản | Số yêu cầu có `quyet_dinh_xem_lai == 'giu'` chia tổng số yêu cầu được xem lại | Không cần tính |
 | An toàn | Nhóm tự đề xuất: Tỉ lệ hoàn tiền sai mức/trùng lệnh | Số yêu cầu phát sinh `refund_audit_mismatch` chia tổng số yêu cầu đã đóng | Không cần tính |
 
@@ -39,5 +39,6 @@ Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý 
 
 | Rủi ro | Tác động đã tính | Dấu hiệu theo dõi | Hành động | Người phụ trách |
 | --- | --- | --- | --- | --- |
-| Tỉ lệ xem lại tăng gấp đôi (nhân viên mất tin tưởng hoặc phải kiểm tra nhiều hơn) | Chi phí mỗi việc thành công tăng ... đ (+...%) [simulated, lấy từ B1] | Tỉ lệ `review_decision_logged` vượt ngưỡng kế hoạch trong 3 ngày liên tiếp | Rà soát nhóm yêu cầu bị sửa/bỏ nhiều nhất, thu hẹp phạm vi hoặc kích hoạt luật dừng pilot | Operations Manager |
-| Số ca làm lại tăng gấp đôi (chất lượng trả lời giảm sau khi đổi chính sách/bảng giá) | Chi phí mỗi việc thành công tăng ... đ (+...%) [simulated, lấy từ B1] | Tỉ lệ `request_reopened_7d` hoặc ca `lam_lai` tăng vượt ngưỡng tuần | Tạm dừng định tuyến tự động cho loại yêu cầu lỗi, cập nhật prompt/bảng giá và kiểm thử lại | AI Engineer |
+| Số ca làm lại tăng gấp đôi (chất lượng trả lời giảm sau khi đổi chính sách/bảng giá) | Chi phí mỗi việc thành công tăng từ 4.472 đ lên **6.787 đ** (+2.315 đ, tức **+51,8%**) [`simulated`] | Tỉ lệ `request_reopened_7d` hoặc ca `lam_lai` tăng vượt ngưỡng tuần trong 3 ngày liên tiếp | Tạm dừng định tuyến tự động cho loại yêu cầu lỗi, cập nhật bảng giá/prompt và kiểm thử lại trước khi mở lại | AI Engineer |
+| Tỉ lệ xem lại tăng gấp đôi (nhân viên mất tin tưởng, kiểm tra nhiều hơn hoặc xem lại 100%) | Chi phí mỗi việc thành công tăng từ 4.472 đ lên **6.292 đ** (+1.820 đ, tức **+40,7%**) [`simulated`]; nếu xem lại 100% ở phạm vi `noi_dia` + `hang_nang`, CPS lên **11.743–12.415 đ** (0,98–1,03× mức 12.000 đ) [`simulated`] | Tỉ lệ `review_decision_logged` (đặc biệt `sua`/`bo`) vượt ngưỡng kế hoạch trong 3 ngày liên tiếp | Rà soát nhóm yêu cầu bị sửa/bỏ nhiều nhất, siết phạm vi pilot hoặc kích hoạt luật dừng pilot | Operations Manager |
+| Lương nhân viên tăng 25% (từ 2.000 đ lên 2.500 đ/phút) | Chi phí mỗi việc thành công tăng từ 4.472 đ lên **5.506 đ** (+1.034 đ, tức **+23,1%**) [`simulated`] | Báo cáo chi phí nhân sự theo giờ từ bộ phận Vận hành/Tài chính hằng tháng | Ưu tiên giảm thời gian xem lại và số ca làm lại thay vì tối ưu giá token (vì giờ nhân viên chiếm 92,5% tổng chi phí [`simulated`]) | Finance / Ops Lead |
